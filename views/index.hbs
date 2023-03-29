@@ -1,0 +1,222 @@
+<div class="container-fluid">
+        <div id="Home" class="row align-items-center hero">
+            <div class="Col-lg-3 offset-lg-2">
+                <p>Bajada</p>
+                <h1>Titulo Principal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--novedades-->
+    <div class="row my-3">
+        <div id="productos" class="col-md-5 offset-md-2 scroll_section">
+            <h2>Productos</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li>
+                    <a href="#" data-bs-toggle="modal" 
+                data-bs-target="#exampleModal{{id}}"><img src="images/novedades01.jpg">{{titulo}}</a></li>
+                </li>
+                {{/each}}
+            </ul>
+        </div><!--cierra novedades-->
+
+
+
+        <div class="col-md-3 my-3">
+            <div class="rounded py-5 testimonios">
+                <h2 class="text-center">testimonios</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item-active">
+                            <h5>"La mejor birra del mundo!"</h5>
+                            
+                            <p>Marcos, Villa del Parque</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="Testimonio">
+                            <h5>La mejor atencion!</h5>
+                            <p>Aldana, Caseros</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="Testimonio">
+                            <h5>Excelente servicio!</h5>
+                            <p>Carla, Coronado</p>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--inicia modal-->
+
+    <!-- Modal -->
+    {{#each novedades}}
+    <div class="modal fade" id="exampleModal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>{{subtitulo}}</h4>
+                    <p>{{cuerpo}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <!--fin modal-->
+
+    <!--incio de historia-->
+
+    <div id="historia" class="row align-items-center py-4 scroll_section">
+        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+            <img src="images/historia_1.jpg" alt="historia 1" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-3 d-none-d-sm-block">
+            <img src="images/historia_2.jpg" alt="historia 2" class="img-fluid">
+        </div>
+        <div class="col-12 d-sm-none">
+            <img src="images/historia_3.jpg" alt="historia 3" class="img-fluid">
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+            <h2>Historia</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas perferendis harum quo aperiam non, necessitatibus quod doloribus repudiandae</p>
+        </div>
+    </div> <!--fin de historia-->
+
+    <!--nosotros-->
+
+    <div id="nosotros" class="row align-items-stretch my-3 staff py-4 scroll_section">
+        <div class="col-lg-8 offset-lg-2">
+            <h2>Nosotros</h2>
+            <div class="row wor-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                          <img src="images/nosotros01.jpg" class="card-img-top" alt="Mariana Costa">
+                            <div class="body">
+                              <h5 class="card-little">Mariana Costa</h5>
+                               <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, ducimus
+                                molestiae. Aliquid fugiat quaerat dolor maiores aliquam id non voluptatem sint esse
+                                excepturi est voluptatibus distinctio voluptates, consequatur vel ad! </p>
+                            </div>
+                         </div>
+                     </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/nosotros02.jpg" class="card-img-top" alt="Fabian Reyes">
+                        <div class="body">
+                            <h5 class="card-little">Fabian Reyes</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, ducimus
+                                molestiae. Aliquid fugiat quaerat dolor maiores aliquam id non voluptatem sint esse
+                                excepturi est voluptatibus distinctio voluptates, consequatur vel ad! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/nosotros03.jpg" class="card-img-top" alt="Lucas Hernandez">
+                        <div class="body">
+                            <h5 class="card-little">Lucas Hernandez</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, ducimus
+                                molestiae. Aliquid fugiat quaerat dolor maiores aliquam id non voluptatem sint esse
+                                excepturi est voluptatibus distinctio voluptates, consequatur vel ad! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="images/nosotros04.jpg" class="card-img-top" alt="Matias Figueroa">
+                        <div class="body">
+                            <h5 class="card-little">Matias Figueroa</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, ducimus
+                                molestiae. Aliquid fugiat quaerat dolor maiores aliquam id non voluptatem sint esse
+                                excepturi est voluptatibus distinctio voluptates, consequatur vel ad! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--CIERRA NOSOTROS-->
+
+    <div id="contacto" class="row py-4">
+        <div class="col-md-4 offset-md-2">
+            <h2>Visitanos</h2>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.219233993449!2d-58.42229628430832!3d-34.5986173804609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca62d4cf1563%3A0x686de505d84c67e6!2sAv.%20Medrano%20951%2C%20C1179AAQ%20CABA!5e0!3m2!1ses!2sar!4v1679268039583!5m2!1ses!2sar"></iframe>
+
+
+            </div>
+        </div>
+     </div class="col-md-4 mt-4 mt-sm-0">
+
+
+    </div>
+
+    </div>
+
+    <div class="col-md-4 mt-4 mt-sm-0">
+        <h2>Contactanos</h2>
+        <form class="row g-3" action="/" method="post">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@gmail.com" name="email">
+            </div>
+            <div class="col-12">
+                <label for="tel" class="form-label">Tel</label>
+                <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+            </div>
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+        <p>{{message}}</p>
+    </div>
+ </div>
